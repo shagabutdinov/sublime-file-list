@@ -41,6 +41,11 @@ All commands will works when file list is visible.
 | Insert absolute file name to view | alt+ctrl+shift+p  |
 
 
+### Dependencies
+
+- https://github.com/shagabutdinov/sublime-quick-search-enhanced
+
+
 ### API
 
 FileList class methods:
@@ -94,4 +99,3 @@ Arguments:
 Result:
 
   A sublime view object that was created to show the file.
-
