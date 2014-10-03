@@ -1,0 +1,76 @@
+[
+  {
+    "keys": ["alt+p"],
+    "command": "insert_file_in_list_to_view",
+    "args": {"type": "short"},
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["alt+shift+p"],
+    "command": "insert_file_in_list_to_view",
+    "args": {"type": "relative"},
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["alt+ctrl+p"],
+    "command": "insert_file_in_list_to_view",
+    "args": {"type": "name"},
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["alt+ctrl+shift+p"],
+    "command": "insert_file_in_list_to_view",
+    "args": {"type": "absolute"},
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+d"],
+    "command": "delete_file_in_list",
+    "context": [
+    {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}]
+  },
+
+  {
+    "keys": ["ctrl+p"],
+    "command": "preview_file_in_list",
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+o"],
+    "command": "open_file_in_list",
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+r"],
+    "command": "prompt_rename_file_in_list",
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["tab"],
+    "command": "rename_file_in_list_complete",
+    "context": [
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "rename"}
+    ]
+  },
+]
