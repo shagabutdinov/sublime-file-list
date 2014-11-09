@@ -1,11 +1,16 @@
 import sublime
 import sublime_plugin
-from QuickSearchEnhanced import quick_search
-from FileList.file_list import get_short_path
-
 import os
 import shutil
-from FolderFiles.folder_files import FolderFiles
+
+try:
+  from QuickSearchEnhanced import quick_search
+  from FileList.file_list import get_short_path
+  from FolderFiles.folder_files import FolderFiles
+except ImportError:
+  sublime.error_message("Dependency import failed; please read readme for " +
+   "FileList plugin for installation instructions; to disable this " +
+   "message remove this plugin")
 
 class DeleteFileInList(sublime_plugin.TextCommand):
   def run(self, edit, confirm = True):

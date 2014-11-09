@@ -2,7 +2,13 @@ import sublime
 import sublime_plugin
 import os
 
-from QuickSearchEnhanced.quick_search import panels
+try:
+  from QuickSearchEnhanced.quick_search import panels
+except ImportError:
+  sublime.error_message("Dependency import failed; please read readme for " +
+   "FileList plugin for installation instructions; to disable this " +
+   "message remove this plugin")
+
 
 def get_short_path(path):
   for folder in sublime.active_window().folders():

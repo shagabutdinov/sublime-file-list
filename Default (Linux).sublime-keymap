@@ -4,6 +4,7 @@
     "command": "insert_file_in_list_to_view",
     "args": {"type": "short"},
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -13,6 +14,7 @@
     "command": "insert_file_in_list_to_view",
     "args": {"type": "relative"},
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -22,6 +24,7 @@
     "command": "insert_file_in_list_to_view",
     "args": {"type": "name"},
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -31,6 +34,7 @@
     "command": "insert_file_in_list_to_view",
     "args": {"type": "absolute"},
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -39,13 +43,16 @@
     "keys": ["ctrl+d"],
     "command": "delete_file_in_list",
     "context": [
-    {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}]
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
   },
 
   {
     "keys": ["ctrl+p"],
     "command": "preview_file_in_list",
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -54,6 +61,7 @@
     "keys": ["ctrl+o"],
     "command": "open_file_in_list",
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -62,6 +70,7 @@
     "keys": ["ctrl+r"],
     "command": "prompt_rename_file_in_list",
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
     ]
   },
@@ -70,6 +79,7 @@
     "keys": ["tab"],
     "command": "rename_file_in_list_complete",
     "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
       {"key": "search_panel_name", "operator": "regex_contains", "operand": "rename"}
     ]
   },

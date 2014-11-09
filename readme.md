@@ -5,7 +5,7 @@ Library for displaying list of files.
 
 ### Demo
 
-![Demo](https://raw.github.com/shagabutdinov/sublime-file-list/master/demo/demo.gif "Demo")
+![Demo](https://github.com/shagabutdinov/sublime-enhanced-demos/raw/master/file_list.gif "Demo")
 
 
 ### WARNING
@@ -43,7 +43,7 @@ All commands will works when file list is visible.
 
 ### Dependencies
 
-- https://github.com/shagabutdinov/sublime-quick-search-enhanced
+* [QuickSearchEnhanced](https://github.com/shagabutdinov/sublime-quick-search-enhanced)
 
 
 ### API
