@@ -44,6 +44,7 @@ All commands will works when file list is visible.
 ### Dependencies
 
 * [QuickSearchEnhanced](https://github.com/shagabutdinov/sublime-quick-search-enhanced)
+* [FolderFiles](https://github.com/shagabutdinov/sublime-folder-files)
 
 
 ### API
