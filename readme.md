@@ -52,31 +52,30 @@ All commands will works when file list is visible.
 FileList class methods:
 
 
-##### __init__(callback, open = None, preview = None, text = None,
-  open_if_one_file = True, callers = [], on_create = None)
+##### __init__(callback, open = None, preview = None, text = None, open_if_one_file = True, callers = [], on_create = None)
 
 Create file list.
 
 Arguments:
 
-  callback - callback function that provides list of files; callback should
-  receive no arguments;
+  - `callback` - callback function that provides list of files; callback should
+    receive no arguments;
 
-  open - open callback; if no open callback provided default open callback will
-  be used
+  - `open` - open callback; if no open callback provided default open callback will
+    be used
 
-  preview - preview callback; if no preview callback provided default preview
-  callback will be used
+  - `preview` - preview callback; if no preview callback provided default preview
+    callback will be used
 
-  text - initial text in panel
+  - `text` - initial text in panel
 
-  open_if_one_file - bool; if only one file found should be it opened right away
-  or displayed in list
+  - `open_if_one_file` - bool; if only one file found should be it opened right away
+    or displayed in list
 
-  callers - callers stack; refer to [sublime-quick-search-enhanced](htt://github.com/shagabutdinov/sublime-quick-search-enhanced)
-  for information
+  - `callers` - callers stack; refer to [sublime-quick-search-enhanced](htt://github.com/shagabutdinov/sublime-quick-search-enhanced)
+    for information
 
-  on_create - callback that will be executed after panel will be created showed
+  - `on_create` - callback that will be executed after panel will be created showed
 
 
 ##### show()
@@ -95,7 +94,7 @@ Preview file from QuickSearch panel and return opened view.
 
 Arguments:
 
-  panel - QuickSearch panel.
+  - `panel` - QuickSearch panel.
 
 Result:
 
