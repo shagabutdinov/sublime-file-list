@@ -7,10 +7,11 @@ try:
   from QuickSearchEnhanced import quick_search
   from FileList.file_list import get_short_path
   from FolderFiles.folder_files import FolderFiles
-except ImportError:
+except ImportError as error:
   sublime.error_message("Dependency import failed; please read readme for " +
    "FileList plugin for installation instructions; to disable this " +
-   "message remove this plugin")
+   "message remove this plugin; message: " + str(error))
+  raise error
 
 class DeleteFileInList(sublime_plugin.TextCommand):
   def run(self, edit, confirm = True):
