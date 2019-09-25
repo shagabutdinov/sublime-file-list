@@ -45,22 +45,42 @@ class DeleteFileInList(sublime_plugin.TextCommand):
     panel.refresh()
     panel.show()
 
+def prepare_file_path(path, current_path=None, type='short'):
+  if type == 'relative':
+    return os.path.relpath(path, os.path.dirname(current_path))
+
+  if type == 'short':
+    value, _ = get_short_path(path)
+    return value
+
+  if type == 'name':
+    return os.path.basename(path)
+
+  if type == 'absolute':
+    return path
+
+  raise Exception('Unknown type "' +type + '"')
+
+def get_file_path(type):
+  panel = quick_search.panels.get_current()
+  value = panel.get_current_value()
+  opener = panel.get_opener()
+  return prepare_file_path(value, opener.file_name(), type)
+
+class CopyFilenameInList(sublime_plugin.TextCommand):
+  def run(self, edit, type = 'relative'):
+    panel = quick_search.panels.get_current()
+    sublime.set_clipboard(get_file_path(type))
+    panel.close(None)
+
+class CopyCurrentPath(sublime_plugin.TextCommand):
+  def run(self, edit, type = 'relative'):
+    sublime.set_clipboard(prepare_file_path(self.view.file_name(), type))
+
 class InsertFileInListToView(sublime_plugin.TextCommand):
   def run(self, edit, type = 'relative'):
     panel = quick_search.panels.get_current()
-    value = panel.get_current_value()
-    opener = panel.get_opener()
-
-    if type == 'relative':
-      value = os.path.relpath(value, os.path.dirname(opener.file_name()))
-    elif type == 'short':
-      value, _ = get_short_path(value)
-    elif type == 'name':
-      value = os.path.basename(value)
-    elif type != 'absolute':
-      raise Exception('Unknown type "' +type + '"')
-
-    opener.run_command('insert', {'characters': value})
+    panel.get_opener().run_command('insert', {'characters': get_file_path(type)})
     panel.close(None)
 
 

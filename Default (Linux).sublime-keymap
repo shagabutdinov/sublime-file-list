@@ -1,5 +1,21 @@
 [
   {
+    "keys": ["alt+c"],
+    "command": "copy_filename_in_list",
+    "args": {"type": "short"},
+    "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
+      {"key": "search_panel_name", "operator": "regex_contains", "operand": "file_list"}
+    ]
+  },
+
+  {
+    "keys": ["ctrl+u", "ctrl+c"],
+    "command": "copy_current_path",
+    "args": {"type": "short"},
+  },
+
+  {
     "keys": ["alt+p"],
     "command": "insert_file_in_list_to_view",
     "args": {"type": "short"},
